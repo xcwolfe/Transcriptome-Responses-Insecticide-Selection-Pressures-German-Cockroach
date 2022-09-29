@@ -20,9 +20,7 @@ library("tibble")
 ```
 
 ```{r}
-Taxonomic_blast_summary_upregulated <- read_excel("Taxonomic.blast.summary_up&down_mike.xlsx")
-
-Taxonomic_blast_summary_downregulated <- read_excel("Taxonomic.blast.summary_up&down_mike.xlsx", sheet = "Downregulated")
+# Read in taxonomic summaries:
 
 Upregulated_totals <- read_excel("Taxonomic.blast.summary_up&down_mike.xlsx", sheet = "Upregulated Totals")
 Downregulated_totals <- read_excel("Taxonomic.blast.summary_up&down_mike.xlsx", sheet = "Downregulated Totals")
