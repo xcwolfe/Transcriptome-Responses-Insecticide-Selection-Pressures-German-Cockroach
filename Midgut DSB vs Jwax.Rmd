@@ -31,10 +31,3 @@ ggplot(denovo_DEG_3methods_DSBvsJwax[1:20,], aes(x = reorder(gene_id, -fc), y = 
   theme(axis.text.x=element_text(angle = 55, hjust=1))+
   ggtitle(paste("Genes most frequently discovered in DSB compared to Jwax"), subtitle = "Species ranked by foldchange")
 ```
-
-
-# Setup DESeq2:
-```{r}
-
-```
-
