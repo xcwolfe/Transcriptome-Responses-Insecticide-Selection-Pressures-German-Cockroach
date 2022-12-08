@@ -7,7 +7,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 ```{r}
 library("primerTree")
 library("gridExtra")
@@ -19,15 +18,15 @@ library("dplyr")
 library("tibble")
 ```
 
-```{r}
 # Read in taxonomic summaries:
-
+```{r}
 Upregulated_totals <- read_excel("Taxonomic.blast.summary_up&down_mike.xlsx", sheet = "Upregulated Totals")
 Downregulated_totals <- read_excel("Taxonomic.blast.summary_up&down_mike.xlsx", sheet = "Downregulated Totals")
 Euk_up_totals <- read_excel("Taxonomic.blast.summary_up&down_mike.xlsx", sheet = "Eukaryotic Genus Breakdown Up")
 Euk_dn_totals <- read_excel("Taxonomic.blast.summary_up&down_mike.xlsx", sheet = "Eukaryotic Genus Breakdown Down")
 ```
 
+# Count transcript data by up and downregulation in Genus, Family, and Order:
 ```{r}
 Upregulated_totals <- transform(Upregulated_totals,
                            Upregulated = reorder(Upregulated, -numbers))
@@ -47,7 +46,7 @@ Euk_dn_totals <- transform(Euk_dn_totals,
                            Family = reorder(Family, -Count))
 ```
 
-
+# Plots:
 ```{r}
 ggplot(Euk_up_totals, aes(x = Genus, y=Percentage, fill = Genus))+
   geom_col(stat="count")+
