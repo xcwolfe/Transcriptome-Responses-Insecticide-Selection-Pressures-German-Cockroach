@@ -13,6 +13,7 @@ library(ggplot2)
 library(dplyr)
 ```
 
+# Import data:
 ```{r}
 denovo_DEG_3methods_DSBvsJwax <- read_excel("denovo_DEG_3methods.DSBvsJwax.xlsx")
 View(denovo_DEG_3methods_DSBvsJwax)
@@ -20,7 +21,6 @@ View(denovo_DEG_3methods_DSBvsJwax)
 
 # Basic ggplots:
 ```{r}
-# ggplot
 ggplot(denovo_DEG_3methods_DSBvsJwax[1:20,], aes(x = reorder(gene_id, -fc), y = fc, fill = taxonomic_super_kingdom)) + 
   geom_col(stat = "identity")+
   theme(axis.text.x=element_text(angle = 55, hjust=1))+
