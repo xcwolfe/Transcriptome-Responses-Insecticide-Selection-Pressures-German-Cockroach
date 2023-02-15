@@ -7,13 +7,15 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# This script will allow us to read in the DESeq data used in the manuscript
+
 ```{r}
 library(readxl)
 library(ggplot2)
 library(dplyr)
 ```
 
-# Import data:
+# Import DESeq and annotation data:
 ```{r}
 denovo_DEG_3methods_DSBvsJwax <- read_excel("denovo_DEG_3methods.DSBvsJwax.xlsx")
 View(denovo_DEG_3methods_DSBvsJwax)
