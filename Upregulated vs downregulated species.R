@@ -7,6 +7,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# This script will allow us to plot the transcriptomic data associated with the published manuscript
+
 ```{r}
 library("primerTree")
 library("gridExtra")
